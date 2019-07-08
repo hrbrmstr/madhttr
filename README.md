@@ -30,7 +30,9 @@ The following functions are implemented:
   - `read_har`: Read HAR objects
   - `tidy_cert`: Turn an openssl downloaded SSL certificate into a tidy
     data frame
+  - `tidy_har`: Tidy HAR entries
   - `tidy_response`: Turn an httr response object into a tidy data frame
+  - `write_har`: Write HAR objects
 
 ## Installation
 
@@ -79,15 +81,35 @@ tidy_response(GET("https://rud.is/b"))
 ## # A tibble: 1 x 7
 ##   url               status_code date                headers    cookies          content     times           
 ##   <chr>                   <int> <dttm>              <I<list>>  <I<list>>        <I<list>>   <I<list>>       
-## 1 https://rud.is/b/         200 2019-07-08 18:35:49 <list [2]> <tibble [1 × 7]> < [60,585]> <tibble [6 × 2]>
+## 1 https://rud.is/b/         200 2019-07-08 20:15:36 <list [2]> <tibble [1 × 7]> < [60,585]> <tibble [6 × 2]>
+```
+
+### HARdy
+
+``` r
+tidy_har(readRDS(system.file("extdat", "example-har.rds", package = "madhttr")))
+## # A tibble: 88 x 11
+##    started   total_time page_ref timings  req_url        resp_url        resp_rdrurl resp_type  resp_size status headers
+##    <chr>          <int> <chr>    <I<list> <chr>          <chr>           <chr>       <chr>          <int>  <int> <I<lis>
+##  1 2019-07-…        352 1        <tibble… https://rud.i… https://rud.is… ""          text/html…        NA    200 <tibbl…
+##  2 2019-07-…         35 1        <tibble… https://rud.i… https://rud.is… ""          applicati…        NA    200 <tibbl…
+##  3 2019-07-…         41 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+##  4 2019-07-…         62 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+##  5 2019-07-…         82 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+##  6 2019-07-…         91 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+##  7 2019-07-…         86 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+##  8 2019-07-…         93 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+##  9 2019-07-…        109 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+## 10 2019-07-…        112 1        <tibble… https://rud.i… https://rud.is… ""          text/css          NA    200 <tibbl…
+## # … with 78 more rows
 ```
 
 ## madhttr Metrics
 
-| Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
-| R    |        7 | 0.88 | 149 | 0.93 |          43 | 0.66 |      112 | 0.74 |
-| Rmd  |        1 | 0.12 |  12 | 0.07 |          22 | 0.34 |       40 | 0.26 |
+| Lang | \# Files |  (%) | LoC |  (%) | Blank lines | (%) | \# Lines |  (%) |
+| :--- | -------: | ---: | --: | ---: | ----------: | --: | -------: | ---: |
+| R    |        8 | 0.89 | 204 | 0.94 |          55 | 0.7 |      128 | 0.75 |
+| Rmd  |        1 | 0.11 |  13 | 0.06 |          24 | 0.3 |       43 | 0.25 |
 
 ## Code of Conduct
 

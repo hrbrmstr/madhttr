@@ -36,6 +36,15 @@ NULL
 #' @export
 read_har <- HARtools::readHAR
 
+#' Write HAR objects
+#'
+#' Snake-case re-exported alias for [HARtools::writeHAR()].
+#'
+#' @param har a string, list/URL or a file containing JSON HAR data
+#' @param file,force,... see [HARtools::writeHAR()]
+#' @export
+write_har <- HARtools::writeHAR
+
 #' @name nslookup
 #' @title Lookup a hostname
 #' @param host,ipv4_only,multiple,error see [curl::nslookup()]

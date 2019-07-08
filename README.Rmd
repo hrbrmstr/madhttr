@@ -62,6 +62,12 @@ tidy_cert(download_ssl_cert("r-project.org"))
 tidy_response(GET("https://rud.is/b"))
 ```
 
+### HARdy
+
+```{r hardy}
+tidy_har(readRDS(system.file("extdat", "example-har.rds", package = "madhttr")))
+```
+
 ## madhttr Metrics
 
 ```{r cloc, echo=FALSE}
