@@ -35,11 +35,17 @@ The following functions are implemented:
 ## Installation
 
 ``` r
+install.packages("madhttr", repos = "https://cinc.rud.is")
+# or
+devtools::install_git("https://git.rud.is/hrbrmstr/madhttr.git")
+# or
 devtools::install_git("https://git.sr.ht/~hrbrmstr/madhttr")
 # or
 devtools::install_gitlab("hrbrmstr/madhttr")
 # or
 devtools::install_bitbucket("hrbrmstr/madhttr")
+# or
+devtools::install_github("hrbrmstr/madhttr")
 ```
 
 ## Usage
@@ -73,7 +79,7 @@ tidy_response(GET("https://rud.is/b"))
 ## # A tibble: 1 x 7
 ##   url               status_code date                headers    cookies          content     times           
 ##   <chr>                   <int> <dttm>              <I<list>>  <I<list>>        <I<list>>   <I<list>>       
-## 1 https://rud.is/b/         200 2019-07-08 18:10:38 <list [2]> <tibble [1 × 7]> < [60,585]> <tibble [6 × 2]>
+## 1 https://rud.is/b/         200 2019-07-08 18:35:49 <list [2]> <tibble [1 × 7]> < [60,585]> <tibble [6 × 2]>
 ```
 
 ## madhttr Metrics
