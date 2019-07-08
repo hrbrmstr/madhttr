@@ -1,18 +1,26 @@
 Package: madhttr
 Type: Package
-Title: madhttr title goes here otherwise CRAN checks fail
+Title: Tidy Helper Methods for Many Types of Unkempt Internet Metadata and Content
 Version: 0.1.0
 Date: 2019-07-08
 Authors@R: c( person("Bob", "Rudis", email = "bob@rud.is", role =
         c("aut", "cre"), comment = c(ORCID = "0000-0001-5670-2640")) )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: The 'httr', 'openssl', and 'HARtools' packages provide methods to retrieve
+    rich metadata and content from internet hosts but their return objects are quite 
+    unkempt. Methods are provided to turn these objects into tidy data frames along with
+    other useful helper methods which augment functionality in these packages.
 URL: https://gitlab.com/hrbrmstr/madhttr
 BugReports: https://gitlab.com/hrbrmstr/madhttr/issues
 Encoding: UTF-8
-License: AGPL
-Suggests: covr, tinytest
+License: MIT + file LICENSE
+Suggests: covr, tinytest, tibble
 Depends: R (>= 3.2.0)
-Imports: httr, jsonlite
+Imports: 
+    httr,
+    openssl,
+    curl,
+    HARtools,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

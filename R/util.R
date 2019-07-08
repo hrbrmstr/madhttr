@@ -1,0 +1,1 @@
+`%l0%` <- function(a, b) if (length(a)) a else b

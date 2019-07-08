@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: inline
 ---
 ```{r pkg-knitr-opts, include=FALSE}
-knitr:: sopts_chunk$set(
+knitr::opts_chunk$set(
   collapse = TRUE, fig.retina = 2, message = FALSE, warning = FALSE
 )
 options(width=120)
@@ -16,11 +16,22 @@ options(width=120)
 
 # madhttr
 
+Tidy Helper Methods for Many Types of Unkempt Internet Metadata and Content
+
 ## Description
+
+The 'httr', 'openssl', and 'HARtools' packages provide methods to retrieve
+rich metadata and content from internet hosts but their return objects are quite
+unkempt. Methods are provided to turn these objects into tidy data frames along with
+other useful helper methods which augment functionality in these packages.
 
 ## What's Inside The Tin
 
 The following functions are implemented:
+
+```{r ingredients, results='asis', echo=FALSE}
+hrbrpkghelpr::describe_ingredients()
+```
 
 ## Installation
 
@@ -32,10 +43,23 @@ hrbrpkghelpr::install_block()
 
 ```{r lib-ex}
 library(madhttr)
+library(tibble) # for printing
 
 # current version
 packageVersion("madhttr")
 
+```
+
+### Certifiable
+
+```{r certs}
+tidy_cert(download_ssl_cert("r-project.org"))
+```
+
+### Responsive
+
+```{r resp}
+tidy_response(GET("https://rud.is/b"))
 ```
 
 ## madhttr Metrics

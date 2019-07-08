@@ -4,12 +4,12 @@
 \name{madhttr}
 \alias{madhttr}
 \alias{madhttr-package}
-\title{...}
+\title{Tidy Helper Methods for Many Types of Unkempt Internet Metadata and Content}
 \description{
-\itemize{
-\item URL: \url{https://gitlab.com/hrbrmstr/madhttr}
-\item BugReports: \url{https://gitlab.com/hrbrmstr/madhttr/issues}
-}
+The 'httr', 'openssl', and 'HARtools' packages provide methods to retrieve
+rich metadata and content from internet hosts but their return objects are quite
+unkempt. Methods are provided to turn these objects into tidy data frames along with
+other useful helper methods which augment functionality in these packages.
 }
 \seealso{
 Useful links:
