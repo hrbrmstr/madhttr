@@ -7,7 +7,7 @@
 tidy_har(.x)
 }
 \arguments{
-\item{a}{\code{harentry} or \code{harentries}/\code{harlog}/\code{har} object}
+\item{.x}{a \code{harentry} or \code{harentries}/\code{harlog}/\code{har} object}
 }
 \description{
 Given a single \code{harentry} or a \code{harentries} list/\code{harlog}/\code{har}, return a data frame

@@ -15,7 +15,7 @@ BugReports: https://gitlab.com/hrbrmstr/madhttr/issues
 Encoding: UTF-8
 License: MIT + file LICENSE
 Suggests: covr, tinytest, tibble
-Depends: R (>= 3.2.0)
+Depends: R (>= 3.5.0)
 Imports: 
     httr,
     openssl,

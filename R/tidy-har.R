@@ -50,7 +50,7 @@
 #' Given a single `harentry` or a `harentries` list/`harlog`/`har`, return a data frame
 #' with selected columns.
 #'
-#' @param a `harentry` or `harentries`/`harlog`/`har` object
+#' @param .x a `harentry` or `harentries`/`harlog`/`har` object
 #' @export
 #' @examples
 #' tidy_har(readRDS(system.file("extdat", "example-har.rds", package = "madhttr")))
